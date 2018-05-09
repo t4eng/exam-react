@@ -2,7 +2,7 @@
   "name": "exam-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://t4eng.github.io/ServiceMookrata/exam-react",
+  "homepage": "https://t4eng.github.io/exam-react",
   "dependencies": {
     "gh-pages": "^1.0.0",
     "react": "^16.3.2",
