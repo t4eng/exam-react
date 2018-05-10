@@ -1,0 +1,85 @@
+.App-logo {
+  animation: App-logo-spin infinite 3s linear;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 180px;
+}
+
+a{
+  text-decoration: none;
+}
+
+form{
+  width: 50%;
+  margin: 0 auto; 
+  background-color: ghostwhite;
+}
+
+button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  background-color: deepskyblue;
+  color:#FFFFFF;
+  border: 1px solid #FFFFFF;
+  height: 50px;
+  width: 90px;
+}
+
+.logo-react{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+}
+
+input{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width:100%;
+  border-radius: 1rem;
+  border: 2px solid gray;
+}input:focus{
+  border-color:#242526
+}
+
+.div-login{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.div-forgot-account{
+  display: flex;
+  margin-left: 40px;
+  margin-right: 40px;
+  color:deepskyblue;
+}
+
+.font-forgot{
+  flex: 1; 
+  text-align: left;
+}.font-forgot:hover{
+  text-decoration: underline;
+}
+
+.font-new-account{
+  flex: 1; 
+  text-align: right;
+}.font-new-account:hover{
+  text-decoration: underline;
+}
+
+.alert-msg{
+  color:red;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
