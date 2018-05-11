@@ -18,7 +18,7 @@ app.use(bodyPaser.json());
 app.use(bodyPaser.urlencoded({ extended: true }));
 
 app.post('/api/login', async (req, res, next) => {
-    const EMAIL = 'admin';
+    const EMAIL = 'admin@admin';
     const PASSWORD = '1234';
     const email = _.get(req, ['body', 'email']);
     const password = _.get(req, ['body', 'password']);
