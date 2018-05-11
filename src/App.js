@@ -15,17 +15,15 @@ class App extends Component {
   }
   getEmail(event){
     this.setState({ email: event.target.value });
-    // console.log(this.state.name)
   }
   getPassword(event){
     this.setState({ password: event.target.value });
-    // console.log(this.state.name)
   }
 
-  handleSubmit(event){
+  handleClick(event){
     event.preventDefault();
     this.setState({ alert_msg:""})
-    this.setState({ img_react:"App-logo" });
+    this.setState({ img_react:"logo-react-spin" });
     axios.post('http://localhost:3000/api/login',{
       "email" : this.state.email,
       "password" : this.state.password
@@ -39,35 +37,32 @@ class App extends Component {
       this.setState({ alert_msg:"E-mail or password is incorrect"})
       this.setState({ img_react:"logo-react" });
       console.log(res.status)
-      console.log("errr")
+      console.log("No Successes")
     })
 }
 
   render() {
     return (
-      <div>
-      <form onSubmit={this.handleSubmit.bind(this)}>
-      <img src={logo} className={this.state.img_react}/>
-      <p></p><p></p>
-      <div className="div-login">
-      <label>E-mail address</label>
-      <br/>
-      <input onChange={this.getEmail.bind(this)} placeholder="youremail@example.com" type="text"/>
-      <br/>
-      <label>Password</label>
-      <br/>
-      <input onChange={this.getPassword.bind(this)} placeholder="your password..." type="password"/>
-      </div>
-      <label className="alert-msg">{this.state.alert_msg}</label>
-      <p></p>
-      <button className="button-signin" type="submit">SIGN IN</button>
-      <p></p>
-      <div className="div-forgot-account">
-      <span className="font-forgot">Forgot password?</span>
-      <span className="font-new-account">Creacte a new account </span>
-      </div><p></p><p></p>
-      </form>
-      </div>
+      <div className="container">
+    <div className="row">
+        <div className="col-sm-6 col-md-4 col-md-offset-4">
+            <div className="account-wall">
+                <img className={this.state.img_react} src={logo} alt=""/>
+                <form className="form-signin">
+                <label>E-mail (admin@admin)</label>
+                <input type="text" onChange={this.getEmail.bind(this)} className="form-control" placeholder="youremail@example" required autoFocus/>
+                <label>Password (1234)</label>
+                <input type="password" onChange={this.getPassword.bind(this)} className="form-control" placeholder="password..." required/>
+                <label className="alert-msg">{this.state.alert_msg}</label>
+                <button className="button-signin" onClick={this.handleClick.bind(this)}>SIGN IN</button>      
+                <span className="pull-left forgot-password">Forgot password?</span>
+                <span className="pull-right new-account">Create a new account</span>
+                <span className="clearfix"></span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
     );
   }
 }
