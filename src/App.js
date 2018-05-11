@@ -24,7 +24,7 @@ class App extends Component {
     event.preventDefault();
     this.setState({ alert_msg:""})
     this.setState({ img_react:"logo-react-spin" });
-    axios.post('http://localhost:3000/api/login',{
+    axios.post('https://exam-react-backend.herokuapp.com/api/login',{
       "email" : this.state.email,
       "password" : this.state.password
     }).then(res => {
